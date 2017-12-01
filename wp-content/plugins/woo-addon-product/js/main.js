@@ -1,6 +1,6 @@
 jQuery(function(){
 	jQuery(".wooap-select-multiple").select2({
-		placeholder: "Select a state",
+		placeholder: "Select addon product",
 		allowClear: true
 	});
 });

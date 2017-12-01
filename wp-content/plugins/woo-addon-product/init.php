@@ -3,7 +3,7 @@
  * Plugin Name:       WooCommerce Addon Product
  * Plugin URI:        http://wpsmartplugin.com/wap
  * Description:       WooCommerce addon product plugin which is use to add additional products for base product
- * Version:           1.0
+ * Version:           1.1
  * Author:            Rajan V
  * Author URI:        https://www.wpsmartplugin.com/
  * License:           GPL-2.0+
