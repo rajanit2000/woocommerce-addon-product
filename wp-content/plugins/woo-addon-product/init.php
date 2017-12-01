@@ -66,7 +66,7 @@ class WooAP
     public function wooap_error_notice()
     { ?>
        	<div class="error notice">
-            <p><?php _e('Increment Cart Total plugin requires WooCommerce Plugin', 'wooap'); ?></p>
+            <p><?php _e('Woocommerce Addon Product Plugin requires WooCommerce Plugin', 'wooap'); ?></p>
         </div>
         <?php
     }
