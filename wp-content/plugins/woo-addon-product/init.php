@@ -17,7 +17,7 @@ class WooAP
     private $version;
     public function __construct()
     {
-        $this->plugin_name = 'Increment Cart Total';
+        $this->plugin_name = 'WooCommerce Addon Product';
         $this->version     = '1.0';
         
         add_action('admin_init', array(
@@ -36,7 +36,7 @@ class WooAP
         add_action('woocommerce_add_to_cart', array(
             $this,
             'wooap_add_to_cart'
-        ));
+        ), 10, 3);
         add_action('admin_enqueue_scripts', array(
             $this,
             'wooap_wp_admin_style'
@@ -205,12 +205,13 @@ class WooAP
      * @return NULL
      * @since 1.0
      */
-    public function wooap_add_to_cart()
+    public function wooap_add_to_cart($cart_item_key, $productID, $quantity)
     {
+
         global $woocommerce;
-        $productID = intval($_POST['product_id']);
         if ($this->is_product_having_addon($productID)) {
             $addon = $this->get_product_addon($productID);
+
             foreach ($addon as $key => $addonID) {
                 if (sizeof(WC()->cart->get_cart()) > 0) {
                     foreach (WC()->cart->get_cart() as $cart_item_key => $values) {
