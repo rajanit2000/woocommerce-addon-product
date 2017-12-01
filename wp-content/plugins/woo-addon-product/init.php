@@ -152,10 +152,12 @@ class WooAP
                 }
                 ?>
                <select type="text" name="wooap[addon][]" id="wooap[addon]" class="wooap-select-multiple ui-corner-all" multiple="multiple">
+                <option>None</option>
                 <?php 
 		        $args = array(
 		            'post_type' => 'product',
-		            'posts_per_page' => -1
+		            'posts_per_page' => -1,
+                    'post__not_in' => array(get_the_ID())
 		        );
 		        $loop = new WP_Query($args);
 		        while ($loop->have_posts()) {

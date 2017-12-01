@@ -7,7 +7,7 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce addon product plugin which is use to add additional products for base product
+If you want to sell some group of product for example Mobile + Headset or TV + DVD Player or Jean + TShirt you can use this plugin, Simple WooCommerce addon product plugin which is use to add additional products for base product
 
 == Description ==
 
