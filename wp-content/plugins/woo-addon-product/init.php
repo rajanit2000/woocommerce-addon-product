@@ -146,7 +146,11 @@ class WooAP
         <div class="wooap-wrap">
             <div class="wooap-left">
                 <p><label for="wooap_nav"><?php _e('Choose addon product IDs?', 'wooap'); ?></label></p>
-                <?php $addon = $this->get_product_addon($post->ID); ?>
+                <?php $addon = $this->get_product_addon($post->ID); 
+                if(empty($addon)){
+                    $addon = array();
+                }
+                ?>
                <select type="text" name="wooap[addon][]" id="wooap[addon]" class="wooap-select-multiple ui-corner-all" multiple="multiple">
                 <?php 
 		        $args = array(

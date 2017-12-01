@@ -1,2 +1,5 @@
 /.htaccess
 /wp-config.php
+/wp-content/plugins/woocommerce
+/wp-content/themes/storefront
+/wp-content/uploads
